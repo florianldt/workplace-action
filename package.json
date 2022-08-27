@@ -4,10 +4,14 @@
     "description": "GitHub Action for sending a Workplace message.",
     "main": "index.js",
     "scripts": {
+        "all": "npm run build && npm run format && npm run lint && npm run package && npm test",
+        "build": "tsc",
+        "format": "prettier --write '**/*.ts'",
         "lint": "eslint .",
+        "package": "ncc build --license licenses.txt",
+        "prepare": "husky install",
         "test": "jest",
-        "test:watch": "jest --watch",
-        "prepare": "husky install"
+        "test:watch": "jest --watch"
     },
     "repository": {
         "type": "git",
