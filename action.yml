@@ -1,0 +1,12 @@
+name: 'Workplace Message'
+description: 'Sending a Workplace message'
+inputs:
+  bot_access_token:
+    description: 'The Workplace Bot access token.'
+    required: true
+  thread_key:
+    description: 'The Workplace thread key to send the message.'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
