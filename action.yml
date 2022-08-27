@@ -7,6 +7,8 @@ inputs:
   thread_key:
     description: 'The Workplace thread key to send the message.'
     required: true
+  text:
+    description: 'The message to send.'
 runs:
   using: 'node16'
   main: 'dist/index.js'
