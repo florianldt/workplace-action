@@ -9,6 +9,8 @@ inputs:
     required: true
   text:
     description: 'The message to send.'
+    required: true
+    default: 'Hello World!'
 runs:
   using: 'node16'
   main: 'dist/index.js'
