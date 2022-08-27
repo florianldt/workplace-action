@@ -6,7 +6,6 @@ async function run(): Promise<void> {
     const threadKey = core.getInput('thread-key');
     const text = core.getInput('text');
 
-    core.debug(accessToken);
     try {
         const res = await notify(accessToken, threadKey, text);
         core.debug(JSON.stringify(res));
