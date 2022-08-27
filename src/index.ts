@@ -1,5 +1,4 @@
 import { debug, getInput, setFailed } from '@actions/core';
-
 import notify from './notify';
 
 async function run(): Promise<void> {
