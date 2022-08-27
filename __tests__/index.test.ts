@@ -34,7 +34,7 @@ test('throw invalid access token data', async () => {
 });
 
 test('throw bad thread key format', async () => {
-    accessToken = process.env.BOT_ACCESS_TOKEN ?? '';
+    accessToken = process.env.WORKPLACE_ACCESS_TOKEN ?? '';
     threadKey = 'invalid';
 
     try {
@@ -49,7 +49,6 @@ test('throw bad thread key format', async () => {
 });
 
 test('throw invalid thread', async () => {
-    accessToken = process.env.BOT_ACCESS_TOKEN ?? '';
     threadKey = 't_5330100977067919';
 
     try {
@@ -64,7 +63,7 @@ test('throw invalid thread', async () => {
 });
 
 test('valid message', async () => {
-    threadKey = process.env.THREAD_KEY ?? '';
+    threadKey = process.env.WORKPLACE_THREAD_KEY ?? '';
 
     const res = await notify(accessToken, threadKey);
     expect(res.thread_key).toBe(threadKey);
