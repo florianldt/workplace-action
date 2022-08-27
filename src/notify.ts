@@ -4,6 +4,7 @@ import { SuccessResponse, ErrorResponse } from './types';
 async function notify(
     accessToken: string,
     threadKey: string,
+    text = 'Hello World!',
 ): Promise<SuccessResponse> {
     try {
         const { data } = await axios.post<SuccessResponse>(
@@ -13,7 +14,7 @@ async function notify(
                     thread_key: threadKey,
                 },
                 message: {
-                    text: 'hello, world!',
+                    text,
                 },
             },
             {
