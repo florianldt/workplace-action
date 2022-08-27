@@ -1,0 +1,26 @@
+{
+    "name": "workplace-action",
+    "version": "0.0.1",
+    "description": "GitHub Action for sending a Workplace message.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/florianldt/workplace-action.git"
+    },
+    "keywords": ["workplace", "action", "message"],
+    "author": "Florian Ludot",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/florianldt/workplace-action/issues"
+    },
+    "homepage": "https://github.com/florianldt/workplace-action#readme",
+    "devDependencies": {
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "husky": "^8.0.0"
+    }
+}
