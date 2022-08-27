@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
         "forceConsistentCasingInFileNames": true,
@@ -10,8 +9,7 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "baseUrl": "./src",
-        "outDir": "./dist"
+        "outDir": "./lib"
     },
-    "exclude": ["node_modules", "dist", "coverage", "test/*"],
-    "include": ["**/*.ts", "**/*.ts", "**/*.config.js"]
+    "exclude": ["node_modules", "**/*.test.ts"]
 }
