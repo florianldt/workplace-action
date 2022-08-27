@@ -1,10 +1,10 @@
 name: 'Workplace Message'
 description: 'Sending a Workplace message'
 inputs:
-  bot_access_token:
+  access-token:
     description: 'The Workplace Bot access token.'
     required: true
-  thread_key:
+  thread-key:
     description: 'The Workplace thread key to send the message.'
     required: true
   text:

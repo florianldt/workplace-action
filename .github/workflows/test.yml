@@ -1,0 +1,30 @@
+name: 'build-test'
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo WORKPLACE_ACCESS_TOKEN=${{ secrets.WORKPLACE_ACCESS_TOKEN }} >> .env
+          echo WORKPLACE_THREAD_KEY=${{ secrets.WORKPLACE_THREAD_KEY }} >> .env
+      - run: |
+          npm ci --ignore-scripts
+      - run: |
+          npm run all
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          access-token: ${{ secrets.WORKPLACE_ACCESS_TOKEN }}
+          thread-key: ${{ secrets.WORKPLACE_THREAD_KEY }}
+          text: 'Successful test!'
