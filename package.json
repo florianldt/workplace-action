@@ -1,0 +1,40 @@
+{
+    "name": "workplace-action",
+    "version": "0.0.1",
+    "description": "GitHub Action for sending a Workplace message.",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint .",
+        "start:dev": "nodemon --config nodemon.json",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/florianldt/workplace-action.git"
+    },
+    "keywords": ["workplace", "action", "message"],
+    "author": "Florian Ludot",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/florianldt/workplace-action/issues"
+    },
+    "homepage": "https://github.com/florianldt/workplace-action#readme",
+    "devDependencies": {
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "@types/node": "^18.7.13",
+        "@typescript-eslint/eslint-plugin": "^5.35.1",
+        "@typescript-eslint/parser": "^5.35.1",
+        "eslint": "^8.23.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript": "^17.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.0",
+        "nodemon": "^2.0.19",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.7.4"
+    }
+}
