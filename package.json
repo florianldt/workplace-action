@@ -2,7 +2,7 @@
     "name": "workplace-action",
     "version": "0.0.1",
     "description": "GitHub Action for sending a Workplace message.",
-    "main": "index.js",
+    "main": "lib/index.js",
     "scripts": {
         "all": "npm run build && npm run format && npm run lint && npm run package && npm test",
         "build": "tsc",
